@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id = "reviews-container">
+        <h1>Reviews and Ratings</h1>
+        <section id = "existing-reviews">
+            <!-- existing ones -->
+        </section>
+
+        <section id = "new-review">
+            <h2>Add a Review</h2>
+            <form id="review-form" action="/api/reviews" method="post">
+                <label for="name">Name:</label>
+                <input type="text" required>
+                
+                <label for="rating">Rating:</label>
+                <select id="rating" name = "rating" required>
+                  <option value="" disabled selected>Select a rating</option>
+                  <option value="1">⭐️</option>
+                  <option value="2">⭐️⭐️</option>
+                  <option value="3">⭐️⭐️⭐️</option>
+                  <option value="4">⭐️⭐️⭐️⭐️</option>
+                  <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+                </select>
+            
+                <label for="comments">Comments:</label>
+                <textarea id="review-text" name="review-text" rows="4" required></textarea>
+            
+                <button type="submit" id = "submit-btn">Submit</button>
+            </form>
+        </section>
+    </div>
+    <div id = "review-list">
+
+    </div>
+    <script src="validation.js"></script>
+</body>
+</html>
